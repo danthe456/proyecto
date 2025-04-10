@@ -1,0 +1,265 @@
+/* Estilos Generales y Reset Básico */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave al hacer clic en los enlaces */
+    font-family: sans-serif; /* Fuente base */
+}
+
+body {
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1100px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.seccion {
+    padding: 60px 0; /* Espaciado vertical entre secciones */
+    /* min-height: 50vh;  Asegura una altura mínima si quieres */
+}
+
+.seccion h2, .seccion h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.seccion p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.imagen-seccion {
+    display: block; /* Para centrar con margin auto */
+    max-width: 80%; /* Ajusta según necesites */
+    height: auto;
+    margin: 20px auto; /* Centra la imagen */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* --- 1. Estilos Presentación (Header y Navegación) --- */
+#presentacion {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-image: url('imagenes/Nutricion-digital-1024x683.jpg'); /* REEMPLAZA con tu imagen */
+    background-color: #cccccc; /* Color de fondo si la imagen no carga */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* ¡Efecto de imagen fija al hacer scroll! */
+    color: white; /* Color del texto sobre el banner */
+    display: flex; /* Para centrar el contenido del banner verticalmente (opcional) */
+    flex-direction: column; /* Apila nav y banner-content */
+    position: relative; /* Necesario para posicionar elementos internos si es necesario */
+    padding: 0; /* Quitar padding de .seccion si se aplica aquí */
+}
+
+.navegacion {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para la barra */
+    position: sticky; /* La barra se queda pegada arriba al hacer scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    padding: 10px 0;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú */
+    align-items: center;
+}
+
+.navegacion ul li {
+    margin: 0 15px;
+}
+
+.navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navegacion ul li a:hover {
+    color: #ffc107; /* Un color para resaltar al pasar el ratón */
+}
+
+.banner-content {
+    /* Centra el texto del banner si lo deseas */
+    margin: auto; /* Centra vertical y horizontalmente dentro del flex container (#presentacion) */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo sutil para mejorar legibilidad */
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    color: #f4f4f4; /* Color un poco más claro */
+}
+
+
+/* --- 2. Estilos Sección Producto --- */
+#producto {
+    background-color: #f9f9f9; /* Color de fondo suave */
+}
+
+#producto ul {
+    list-style: disc; /* Estilo de viñeta */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.precios {
+    display: flex; /* Coloca los planes uno al lado del otro */
+    justify-content: space-around; /* Espaciado entre planes */
+    flex-wrap: wrap; /* Si no caben, se ponen debajo */
+    gap: 20px; /* Espacio entre los planes */
+    margin-top: 30px;
+}
+
+.plan {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    flex: 1; /* Intenta que ocupen el mismo espacio */
+    min-width: 250px; /* Ancho mínimo para cada plan */
+}
+
+.plan h4 {
+    color: #007bff; /* Color para el título del plan */
+    margin-bottom: 10px;
+}
+
+.plan ul {
+    list-style: none; /* Quita viñetas de características */
+    padding: 0;
+    margin-top: 10px;
+    text-align: left; /* Alinea características a la izquierda */
+    margin-left: 15px;
+}
+.plan ul li::before {
+    content: '✓ '; /* Añade un check antes de cada característica */
+    color: green;
+}
+
+/* --- 3. Estilos Sección Formulario --- */
+#formulario-seccion .placeholder-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px dashed #ccc;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#formulario-seccion label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#formulario-seccion select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formulario-seccion button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-seccion button:hover {
+    background-color: #218838;
+}
+
+
+/* --- 4. Estilos Contacto y Ubicación (Footer) --- */
+#contacto {
+    background-color: #333; /* Fondo oscuro para el pie de página */
+    color: #f4f4f4; /* Texto claro */
+}
+
+#contacto h2 {
+    color: #ffffff; /* Título en blanco */
+}
+
+#contacto p {
+    color: #ccc; /* Texto un poco más apagado */
+    margin-bottom: 10px;
+}
+
+#contacto a { /* Si pones enlaces en el footer */
+    color: #00aaff;
+    text-decoration: none;
+}
+#contacto a:hover {
+    text-decoration: underline;
+}
+
+.info-contacto {
+    margin-bottom: 30px;
+    text-align: center; /* Centra la info de contacto */
+}
+
+.mapa-placeholder {
+    text-align: center; /* Centra el placeholder del mapa */
+    background-color: #555; /* Fondo para el placeholder */
+    padding: 20px;
+    border-radius: 8px;
+}
+.mapa-placeholder img {
+    border: 1px solid #777;
+}
+
+
+/* --- Estilos Adicionales (Opcional: Responsividad básica) --- */
+@media (max-width: 768px) {
+    .navegacion ul {
+        flex-direction: column; /* Menú vertical en pantallas pequeñas */
+        padding: 10px;
+    }
+    .navegacion ul li {
+        margin: 5px 0;
+    }
+    .banner-content h1 {
+        font-size: 2em;
+    }
+    .precios {
+        flex-direction: column; /* Planes uno debajo del otro */
+        align-items: center; /* Centra los planes */
+    }
+    .plan {
+        width: 80%; /* Ocupa más ancho en móvil */
+    }
+    .seccion {
+        padding: 40px 0; /* Menos padding vertical */
+    }
+   
+}
