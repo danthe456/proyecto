@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
-                "Authorization": "Bearer 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", // Reemplaza esto por tu clave real
+                "Authorization": ", // Reemplaza esto por tu clave real
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
