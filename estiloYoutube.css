@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.buscador-youtube {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajusta el ancho según necesites */
+}
+
+.buscador-youtube h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#formulario-youtube {
+    display: flex;
+    align-items: center;
+}
+
+.campo-busqueda {
+    display: flex;
+    flex-grow: 1;
+}
+
+.campo-busqueda input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.campo-busqueda button[type="submit"] {
+    background-color: #dc2626; /* Rojo de YouTube */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ajusta el ancho del botón */
+}
+
+.campo-busqueda button[type="submit"] svg {
+    width: 20px;
+    height: 20px;
+}
+
+.campo-busqueda button[type="submit"]:hover {
+    background-color: #c82222;
+}
